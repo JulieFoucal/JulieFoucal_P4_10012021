@@ -24,7 +24,7 @@ a:hover {
     bottom: 0;
     width: 100%;
     z-index: 100000;
-    background: #FFFFFF url("image/pageload-spinner.gif") no-repeat center center;
+    background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
 }
 
 .bloc {
@@ -91,7 +91,7 @@ a:hover {
 }
 
 .texture-paper::before {
-    background: url("Images/paper.png");
+    background: url("img/texture-paper.png");
     background-size: 280px 280px;
 }
 
@@ -565,7 +565,6 @@ a[data-lightbox]:hover img {
     align-items: center;
 }
 
-
 #lightbox-modal .modal-dialog {
     width: 90%;
     max-width: 900px;
@@ -646,21 +645,15 @@ h3,
 h4,
 h5,
 h6,
+p,
 label,
 .btn,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: black!important;
+    color: #575757!important;
 }
 
-p{
-    color: black;
-}
-
-.pp{
-    color: #FFFFFF!important;
-}
 .container {
     max-width: 1000px;
 }
@@ -730,11 +723,11 @@ h3 {
 }
 
 h1 {
-    color: #8A330A!important;
+    color: #333333!important;
 }
 
 h4 {
-    color: #FFFF!important;
+    color: #333333!important;
 }
 
 .icons {
@@ -748,12 +741,6 @@ h4 {
 
 .portfolio-thumb {
     margin-bottom: 24px;
-    width: 100%;
-}
-
-.reseauxsociaux{
-    display:flex;
-    justify-content:space-between;
 }
 
 .portfolio-row {
@@ -780,33 +767,29 @@ h4 {
 }
 
 .bgc-dark-slate-blue {
-    background-color: #FFFFFF;
+    background-color: #364577;
 }
 
 .bgc-atomic-tangerine {
-    background-color: #8A330A;
+    background-color: #F3976C;
 }
 
-.parlons {
-    color: #FFFFFF!important;
+.tc-white {
+    color: #F3976C!important;
 }
 
 .btn-atomic-tangerine {
-    background: #8A330A;
+    background: #F3976C;
     color: #FFFFFF!important;
 }
 
 .btn-atomic-tangerine:hover {
-    background: #8A330A!important;
+    background: #c27956!important;
     color: #FFFFFF!important;
 }
 
 .ltc-white {
-    color: #8A330A!important;
-}
-.parlons{
     color: #FFFFFF!important;
-
 }
 
 .ltc-white:hover {
@@ -814,16 +797,16 @@ h4 {
 }
 
 .ltc-atomic-tangerine {
-    color: #8A330A!important;
+    color: #F3976C!important;
 }
 
 .ltc-atomic-tangerine:hover {
-    color: #8A330A!important;
+    color: #c27956!important;
 }
 
 .icon-dark-slate-blue {
-    color: #161C31!important;
-    border-color: #161C31!important;
+    color: #364577!important;
+    border-color: #364577!important;
 }
 
 .bg-dots-bg {
@@ -835,11 +818,11 @@ h4 {
 }
 
 .bg-banniere {
-    background-image: url("img/banniere-min.jpg");
+    background-image: url("img/la-chouette-agence-banniere.jpg");
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation-min.jpeg");
+    background-image: url("img/image-de-presentation.bmp");
 }
 
 @media (max-width: 1024px) {
@@ -865,13 +848,13 @@ h4 {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-pixel-ratio: 1.5) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -889,13 +872,21 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-   
+    .bloc {
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
+    }
     .bloc-group,
     .bloc-group .bloc {
         display: block;
         width: 100%;
     }
-    
+    .bloc-fill-screen .fill-bloc-top-edge,
+    .bloc-fill-screen .fill-bloc-bottom-edge {
+        padding: 0 20px;
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
+    }
 }
 
 @media (max-width: 767px) {
